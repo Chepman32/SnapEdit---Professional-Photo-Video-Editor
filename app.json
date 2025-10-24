@@ -1,0 +1,34 @@
+{
+  "name": "SnapEdit",
+  "displayName": "SnapEdit - Professional Photo & Video Editor",
+  "version": "1.0.0",
+  "bundleId": "com.snapedit.app",
+  "orientation": "portrait",
+  "icon": "./src/assets/images/icon.png",
+  "splash": {
+    "image": "./src/assets/images/splash.png",
+    "backgroundColor": "#0A0A0A"
+  },
+  "platforms": ["ios", "android"],
+  "ios": {
+    "bundleIdentifier": "com.snapedit.app",
+    "buildNumber": "1",
+    "supportsTablet": true,
+    "infoPlist": {
+      "NSCameraUsageDescription": "SnapEdit needs access to your camera to take photos.",
+      "NSPhotoLibraryUsageDescription": "SnapEdit needs access to your photos to edit them.",
+      "NSPhotoLibraryAddUsageDescription": "SnapEdit needs permission to save edited photos.",
+      "NSMicrophoneUsageDescription": "SnapEdit needs access to your microphone for video recording."
+    }
+  },
+  "android": {
+    "package": "com.snapedit.app",
+    "versionCode": 1,
+    "permissions": [
+      "CAMERA",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "RECORD_AUDIO"
+    ]
+  }
+}
