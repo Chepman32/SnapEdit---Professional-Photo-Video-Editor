@@ -8,10 +8,11 @@ import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {RootStackParamList} from './types';
 import {TabNavigator} from './TabNavigator';
 
-// Import screens (placeholders for now)
+// Import screens
 import {SplashScreen} from '@screens/SplashScreen';
 import {OnboardingScreen} from '@screens/OnboardingScreen';
 import {EditorScreen} from '@screens/EditorScreen';
+import {VideoEditorScreen} from '@screens/VideoEditorScreen';
 import {SettingsScreen} from '@screens/SettingsScreen';
 import {PaywallScreen} from '@screens/PaywallScreen';
 
@@ -50,6 +51,14 @@ export const RootNavigator = () => {
       <Stack.Screen
         name="Editor"
         component={EditorScreen}
+        options={{
+          presentation: 'modal',
+          ...TransitionPresets.ModalSlideFromBottomIOS,
+        }}
+      />
+      <Stack.Screen
+        name="VideoEditor"
+        component={VideoEditorScreen}
         options={{
           presentation: 'modal',
           ...TransitionPresets.ModalSlideFromBottomIOS,
